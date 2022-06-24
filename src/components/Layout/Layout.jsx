@@ -7,11 +7,18 @@ import { Header } from '../Header/Header';
 export const Layout = () => {
     return (
         <div className={styles.wrapper}>
-            <div>
+            <div className={styles.container}>
                 <Header />
             </div>
             <div className={styles.container}>
-                <Navigation />
+                <div className={styles.mainContent}>
+                    <div className={styles.navigationContent}>
+                        <Navigation />
+                    </div>
+                    <div className={styles.outletContent}>
+                        <Outlet />
+                    </div>
+                </div>
             </div>
         </div>
     )

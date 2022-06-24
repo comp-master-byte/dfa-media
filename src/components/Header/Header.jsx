@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { DfaModal } from '../../UI/DfaModal/DfaModal';
+import React, { useState } from "react";
+import { DfaButton } from '../../UI/dfaButton/DfaButton.jsx';
+import { DfaModal } from '../../UI/DfaModal/DfaModal.jsx';
 import styles from "./Header.module.scss";
 
 export const Header = () => {
@@ -12,7 +13,7 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <DfaModal visible={isVisible} onClose={visiblityOff} />
-            <button onClick={visiblityOn}>Открыть</button>
+            <DfaButton onClick={visiblityOn} btnText='Открыть' />
         </header>
     )
 }
