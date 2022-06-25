@@ -25,20 +25,6 @@
     width: 80%;
 }
 
-@media (max-width: 1749px) {
-    div.container {
-        max-width: 1200px !important;
-    }
-
-    div.outletContent {
-        width: 75% !important;
-    }
-
-    div.navigationContent {
-        flex-basis: 25% !important;
-    }
-}
-
 .header {
     display: flex;
     align-items: center;
@@ -73,6 +59,20 @@
 @media (min-width: 1920px) {
     div.container {
         max-width: 1600px !important;
+    }
+}
+
+@media (max-width: 1749px) {
+    div.container {
+        max-width: 1200px !important;
+    }
+
+    div.outletContent {
+        width: 75% !important;
+    }
+
+    div.navigationContent {
+        flex-basis: 25% !important;
     }
 }
 

@@ -7,7 +7,6 @@
         background-color: #192233;
         top: 80px;
         left: -100%;
-        text-align: center;
         z-index: 5;
         transition: .5s;
     }
@@ -15,5 +14,8 @@
     div.active {
         left: 0;
         transition: .5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
