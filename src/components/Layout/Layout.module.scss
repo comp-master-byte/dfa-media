@@ -11,7 +11,6 @@
 
 .mainContent {
     display: flex;
-    // justify-content: space-between;
     min-height: calc(100vh - 80px);
 }
 
@@ -44,12 +43,10 @@
     div.container {
         max-width: 1600px !important;
     }
+}
 
-    div.outletContent {
-        // width: 80%;
-    }
-
-    div.navigationContent {
-        // flex-basis: 20%;
+@media (max-width: 1249px) {
+    .mainContent {
+        padding: 0 1rem;
     }
 }

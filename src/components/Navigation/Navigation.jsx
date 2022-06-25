@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import styles from "./Navigation.module.scss";
 import { DfaLink } from '../../UI/DfaLink/DfaLink.jsx';
 import structure from "../../images/icons/structure.svg";
@@ -17,56 +17,65 @@ import { FiHeart } from "react-icons/fi"
 
 export const Navigation = () => {
 
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
+
     return (
         <Fragment>
-            <DfaLink
-                to='/dashboard'
-                textLink="Дашбоард"
-                icon={dashboard}
-                activeIcon={activeSdashboard}
-            />
-            <DfaLink
-                to='/active'
-                textLink="Биржа активности"
-                icon={discuss}
-                activeIcon={activeDiscuss}
-            />
-            <DfaLink
-                to='/blogers'
-                textLink="Биржа блогеров"
-                icon={dashboard}
-                activeIcon={activeSdashboard}
-            />
-            <DfaLink
-                to='/pr'
-                textLink="Взаимопиар"
-                reactIcon={<FiHeart style={{ width: 28, height: 24 }} />}
-            />
-            <DfaLink
-                to='/structure'
-                textLink="Моя структура"
-                icon={structure}
-                activeIcon={activeStructure}
-            />
+            <div className={styles.burger}>
+                <div className={styles.burder__lines}></div>
+                <div className={styles.burder__lines}></div>
+                <div className={styles.burder__lines}></div>
+            </div>
+            <div className={styles.menu}>
+                <DfaLink
+                    to='/dashboard'
+                    textLink="Дашбоард"
+                    icon={dashboard}
+                    activeIcon={activeSdashboard}
+                />
+                <DfaLink
+                    to='/active'
+                    textLink="Биржа активности"
+                    icon={discuss}
+                    activeIcon={activeDiscuss}
+                />
+                <DfaLink
+                    to='/blogers'
+                    textLink="Биржа блогеров"
+                    icon={dashboard}
+                    activeIcon={activeSdashboard}
+                />
+                <DfaLink
+                    to='/pr'
+                    textLink="Взаимопиар"
+                    reactIcon={<FiHeart style={{ width: 28, height: 24 }} />}
+                />
+                <DfaLink
+                    to='/structure'
+                    textLink="Моя структура"
+                    icon={structure}
+                    activeIcon={activeStructure}
+                />
 
-            <DfaLink
-                to='/shop'
-                textLink="Магазин"
-                icon={shop}
-                activeIcon={activeShop}
-            />
-            <DfaLink
-                to='/maraphon'
-                textLink="Марафон"
-                icon={maraphon}
-                activeIcon={activeMaraphon}
-            />
-            <DfaLink
-                to='/landings'
-                textLink="Лендинги"
-                icon={landing}
-                activeIcon={activeLanding}
-            />
+                <DfaLink
+                    to='/shop'
+                    textLink="Магазин"
+                    icon={shop}
+                    activeIcon={activeShop}
+                />
+                <DfaLink
+                    to='/maraphon'
+                    textLink="Марафон"
+                    icon={maraphon}
+                    activeIcon={activeMaraphon}
+                />
+                <DfaLink
+                    to='/landings'
+                    textLink="Лендинги"
+                    icon={landing}
+                    activeIcon={activeLanding}
+                />
+            </div>
         </Fragment>
     )
 }
