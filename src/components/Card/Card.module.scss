@@ -1,11 +1,14 @@
+@import url('http://fonts.cdnfonts.com/css/pt-root-ui');
+
 .card {
-    background-color: #192233;
+    background-color: rgba(25, 34, 51, .5);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     padding: .625rem .9375rem;
     width: 119px;
     height: 228px;
     transition: .25s;
     border-radius: 12px;
+    font-family: 'PT Root UI', sans-serif;
 
     &:hover {
         box-shadow: 0 0 5px #000;
@@ -27,7 +30,7 @@
         font-weight: 500;
 
         .cardNumber__level {
-            margin-right: 3rem;
+            margin-right: 2.75rem;
         }
     }
 
@@ -37,6 +40,7 @@
         color: #fff;
         font-size: .5rem;
         font-weight: 400;
+        margin-bottom: 1.375rem;
 
         .cardInfo__level {
             margin-right: .9375rem;
@@ -44,9 +48,10 @@
     }
 
     .avatarList {
-        margin-top: 1.375rem;
-        // overflow-y: scroll;
-        // overflow-x: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 9.5rem;
+        padding-bottom: .5rem;
 
         .avatarItem {
             display: flex;
@@ -56,6 +61,10 @@
             opacity: .5;
             margin-top: .625rem;
             transition: .25s;
+
+            &:nth-child(1) {
+                margin-top: 0 !important;
+            }
 
             &:hover {
                 opacity: 1;
@@ -75,4 +84,17 @@
             }
         }
     }
+}
+
+.avatarList::-webkit-scrollbar {
+    width: 1px;
+}
+
+.avatarList::-webkit-scrollbar-track {
+    background-color: #192233;
+}
+
+.avatarList::-webkit-scrollbar-thumb {
+    background-color: #707D96;
+    border-radius: 1px;
 }

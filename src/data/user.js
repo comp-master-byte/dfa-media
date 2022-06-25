@@ -5,4 +5,5 @@ export const users = [
     {id: 2, avatar, nickname: "kris_anfalova"},
     {id: 3, avatar, nickname: "kris_anfalova"},
     {id: 4, avatar, nickname: "kris_anfalova"},
+    {id: 5, avatar, nickname: "kris_anfalova"},
 ]
