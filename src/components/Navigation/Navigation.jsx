@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from "react";
 import styles from "./Navigation.module.scss";
 import { DfaLink } from '../../UI/DfaLink/DfaLink.jsx';
 import structure from "../../images/icons/structure.svg";
@@ -13,20 +13,15 @@ import activeDiscuss from "../../images/activeIcons/discuss.svg";
 import activeShop from "../../images/activeIcons/shop.svg";
 import activeMaraphon from "../../images/activeIcons/marathon.svg";
 import activeLanding from "../../images/activeIcons/landing.svg";
-import { FiHeart } from "react-icons/fi"
+import { FiHeart } from "react-icons/fi";
 
-export const Navigation = () => {
+export const Navigation = (props) => {
 
-    const [isOpenMenu, setIsOpenMenu] = useState(false);
+    const { isOpenMenu } = props;
 
     return (
         <Fragment>
-            <div className={styles.burger}>
-                <div className={styles.burder__lines}></div>
-                <div className={styles.burder__lines}></div>
-                <div className={styles.burder__lines}></div>
-            </div>
-            <div className={styles.menu}>
+            <div className={isOpenMenu ? `${styles.menu} ${styles.active}` : styles.menu}>
                 <DfaLink
                     to='/dashboard'
                     textLink="Дашбоард"

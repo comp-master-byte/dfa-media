@@ -1,28 +1,19 @@
-.burger {
-    width: 25px;
-    height: 14px;
-    cursor: pointer;
-    display: none;
-
-    .burder__lines {
-        display: block;
-        background-color: #fff;
-        width: 100%;
-        height: 3px;
-        margin-bottom: 5px;
-
-        &:last-child {
-            margin-bottom: 0 !important;
-        }
-    }
-}
-
 @media (max-width: 1049px) {
-    div.burger {
-        display: block;
-    }
 
     div.menu {
-        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #192233;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        z-index: 5;
+        transition: .5s;
+    }
+
+    div.active {
+        left: 0;
+        transition: .5s;
     }
 }
