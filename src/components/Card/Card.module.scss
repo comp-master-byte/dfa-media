@@ -2,7 +2,6 @@
 
 .card {
     background-color: rgba(25, 34, 51, .5);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     padding: .625rem .9375rem;
     width: 119px;
     height: 228px;
@@ -11,7 +10,8 @@
     font-family: 'PT Root UI', sans-serif;
 
     &:hover {
-        box-shadow: 0 0 5px #000;
+        box-shadow: 0px 3px 8px #000;
+        border: 1px solid #000;
         cursor: pointer;
     }
 

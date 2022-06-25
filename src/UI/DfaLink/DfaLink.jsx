@@ -4,7 +4,7 @@ import { Link, useMatch } from "react-router-dom";
 
 export const DfaLink = (props) => {
 
-    const { to, textLink, icon, activeIcon } = props;
+    const { to, textLink, icon, activeIcon, reactIcon } = props;
 
     const match = useMatch(to)
 
@@ -17,11 +17,15 @@ export const DfaLink = (props) => {
                     : styles.link}
         >
             <div className={styles.link__icon}>
-                {
-                    match
-                        ? <img src={activeIcon} alt="Моя структура" />
-                        : <img src={icon} alt="Моя структура" />
-                }
+                {/* {
+                    match && icon && activeIcon
+                        ? <img src={activeIcon} />
+                        : <img src={icon} />
+                } */}
+
+                {icon && <img src={icon} />}
+                {reactIcon || null}
+
             </div>
             <div className={styles.link__text}>{textLink}</div>
         </Link>
