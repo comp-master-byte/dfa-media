@@ -1,8 +1,10 @@
-import React from 'react';
+import React from "react";
 import styles from "./Card.module.scss";
-import avatar from "../../images/icons/avatarActive.png";
+import { users } from "../../data/user";
 
 export const Card = () => {
+
+
     return (
         <div className={styles.card}>
             <div className={styles.cardNumbers}>
@@ -15,12 +17,14 @@ export const Card = () => {
                 <div className={styles.cardInfo__partners}>Активных партнёров</div>
             </div>
             <div className={styles.avatarList}>
-                <div className={styles.avatarItem}>
-                    <div className={styles.avatarItem__img}>
-                        <img src={avatar} alt="" />
+                {users.map(user =>
+                    <div key={user.id} className={styles.avatarItem}>
+                        <div className={styles.avatarItem__img}>
+                            <img src={user.avatar} alt="" />
+                        </div>
+                        <div className={styles.avatarItem__nickname}>{user.nickname}</div>
                     </div>
-                    <div className={styles.avatarItem__nickname}>kris_anfalova</div>
-                </div>
+                )}
             </div>
         </div>
     )

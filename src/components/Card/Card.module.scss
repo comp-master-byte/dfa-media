@@ -6,7 +6,6 @@
     height: 228px;
     transition: .25s;
     border-radius: 12px;
-    margin-top: 147px;
 
     &:hover {
         box-shadow: 0 0 5px #000;
@@ -46,6 +45,8 @@
 
     .avatarList {
         margin-top: 1.375rem;
+        // overflow-y: scroll;
+        // overflow-x: hidden;
 
         .avatarItem {
             display: flex;
@@ -53,6 +54,7 @@
             color: #fff;
             font-weight: 400;
             opacity: .5;
+            margin-top: .625rem;
             transition: .25s;
 
             &:hover {
@@ -60,7 +62,7 @@
             }
 
             .avatarItem__img {
-                margin-right: .9375rem;
+                margin-right: .3125rem;
 
                 img {
                     width: 25px;
