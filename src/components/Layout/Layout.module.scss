@@ -11,16 +11,45 @@
 
 .mainContent {
     display: flex;
+    // justify-content: space-between;
     min-height: calc(100vh - 80px);
 }
 
 .navigationContent {
-    flex-basis: 15%;
+    width: 20%;
 }
 
 .outletContent {
     background-color: #212C42;
     border-radius: 50px 50px 0 0;
     padding: 15px 108px 15px 108px;
-    max-width: 85%;
+    width: 80%;
+}
+
+@media (max-width: 1749px) {
+    div.container {
+        max-width: 1200px !important;
+    }
+
+    div.outletContent {
+        width: 75% !important;
+    }
+
+    div.navigationContent {
+        flex-basis: 25% !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    div.container {
+        max-width: 1600px !important;
+    }
+
+    div.outletContent {
+        // width: 80%;
+    }
+
+    div.navigationContent {
+        // flex-basis: 20%;
+    }
 }
