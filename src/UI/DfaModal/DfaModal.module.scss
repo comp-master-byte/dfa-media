@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.4);
-    z-index: 4;
+    z-index: 7;
 }
 
 .content {
@@ -17,8 +17,23 @@
     border-radius: 8px;
     border: none;
     outline: none;
+    width: 30rem;
 }
 
 .inputBlock__input {
     margin-bottom: 1rem;
+}
+
+@media (max-width: 1249px) {}
+
+@media (max-width: 1049px) {
+    div.content {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 500px) {
+    div.content {
+        width: 15rem;
+    }
 }
