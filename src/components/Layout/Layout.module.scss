@@ -22,15 +22,18 @@
 .outletContent {
     background-color: #212C42;
     border-radius: 50px 50px 0 0;
-    padding: 15px 108px 15px 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 62px;
     width: 80%;
 }
 
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.875rem;
+    justify-content: flex-end;
+    padding: 0 1.875rem;
     height: 5rem;
 }
 
@@ -63,7 +66,7 @@
     }
 }
 
-@media (max-width: 1749px) {
+@media (max-width: 1749px) and (min-width: 1250px) {
     div.container {
         max-width: 1200px !important;
     }
@@ -86,5 +89,22 @@
 @media (max-width: 1049px) {
     div.burger {
         display: block;
+    }
+
+    div.header {
+        justify-content: space-between;
+    }
+
+    div.outletContent {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    div.navigationContent {
+        width: 0%;
+    }
+
+    div.mainContent {
+        justify-content: center;
     }
 }

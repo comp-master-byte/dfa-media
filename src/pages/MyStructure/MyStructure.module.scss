@@ -12,3 +12,21 @@
     flex-wrap: wrap;
     gap: 2.1875rem;
 }
+
+@media (max-width: 1249px) {
+    div.structure__title {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 1049px) {
+    div.structure__title {
+        font-size: 1.2rem !important;
+        text-align: center;
+    }
+
+    div.cardList {
+        margin-top: 3rem !important;
+        justify-content: center;
+    }
+}
