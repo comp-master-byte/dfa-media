@@ -29,6 +29,14 @@
     width: 80%;
 }
 
+.stickyHeader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #192233;
+    z-index: 6;
+}
+
 .header {
     display: flex;
     align-items: center;
