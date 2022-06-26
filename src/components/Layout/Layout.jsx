@@ -17,7 +17,7 @@ export const Layout = () => {
                     <div className={styles.headerBlock}>
                         <Header />
                     </div>
-                    <div className={styles.burger} onClick={toggleHandler}>
+                    <div className={isOpenMenu ? `${styles.burgerClose} ${styles.burger}` : styles.burger} onClick={toggleHandler}>
                         <div className={styles.burder__lines}></div>
                         <div className={styles.burder__lines}></div>
                         <div className={styles.burder__lines}></div>
