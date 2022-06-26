@@ -10,7 +10,7 @@ export const MyStructure = () => {
 
             <div className={styles.cardList}>
                 {cards.map(card => {
-                    return <Card key={card.id} />
+                    return <Card key={card.id} card={card} />
                 })}
             </div>
         </div>

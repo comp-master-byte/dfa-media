@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./Card.module.scss";
-import { users } from "../../data/user";
+import { users } from "../../data/users.js";
 
-export const Card = () => {
+export const Card = (props) => {
 
+    const { card } = props;
 
     return (
         <div className={styles.card}>
             <div className={styles.cardNumbers}>
-                <div className={styles.cardNumber__level}>1</div>
-                <div className={styles.cardNumber__partners}>133</div>
+                <div className={styles.cardNumber__level}>{card?.lavel}</div>
+                <div className={styles.cardNumber__partners}>{card?.partners}</div>
             </div>
             <div className={styles.border} />
             <div className={styles.cardInfo}>
