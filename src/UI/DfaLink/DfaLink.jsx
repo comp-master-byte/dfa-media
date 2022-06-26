@@ -17,14 +17,7 @@ export const DfaLink = (props) => {
                     : styles.link}
         >
             <div className={styles.link__icon}>
-                {/* {
-                    match && icon && activeIcon
-                        ? <img src={activeIcon} />
-                        : <img src={icon} />
-                } */}
-
-                {icon && <img src={icon} />}
-                {reactIcon || null}
+                {match ? <img src={activeIcon} alt="" /> : <img src={icon} alt="" />}
 
             </div>
             <div className={styles.link__text}>{textLink}</div>

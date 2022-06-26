@@ -7,13 +7,14 @@ import discuss from "../../images/icons/discuss.svg";
 import shop from "../../images/icons/shop.svg";
 import maraphon from "../../images/icons/marathon.svg";
 import landing from "../../images/icons/landing.svg";
+import heart from "../../images/icons/heart.svg";
 import activeStructure from "../../images/activeIcons/structure.svg";
 import activeSdashboard from "../../images/activeIcons/homePage.svg";
 import activeDiscuss from "../../images/activeIcons/discuss.svg";
 import activeShop from "../../images/activeIcons/shop.svg";
 import activeMaraphon from "../../images/activeIcons/marathon.svg";
 import activeLanding from "../../images/activeIcons/landing.svg";
-import { FiHeart } from "react-icons/fi";
+import activeHeart from "../../images/activeIcons/heart.svg";
 
 export const Navigation = (props) => {
 
@@ -43,7 +44,8 @@ export const Navigation = (props) => {
                 <DfaLink
                     to='/pr'
                     textLink="Взаимопиар"
-                    reactIcon={<FiHeart style={{ width: 28, height: 24 }} />}
+                    icon={heart}
+                    activeIcon={activeHeart}
                 />
                 <DfaLink
                     to='/structure'
