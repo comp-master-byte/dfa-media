@@ -14,7 +14,7 @@ export const Layout = () => {
         <div className={styles.wrapper}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <div>
+                    <div className={styles.headerBlock}>
                         <Header />
                     </div>
                     <div className={styles.burger} onClick={toggleHandler}>
