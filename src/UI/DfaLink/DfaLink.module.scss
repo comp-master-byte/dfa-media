@@ -5,6 +5,7 @@
     text-decoration: none;
     padding-left: 1.875rem;
     margin-bottom: 2.3125rem;
+    position: relative;
 
     .link__text {
         color: #8B97AE;
@@ -20,20 +21,27 @@
     }
 }
 
+.highlight {
+    position: absolute;
+    width: .3125rem;
+    height: .1rem;
+    background-color: #6781F7;
+    border-radius: 8px;
+    top: 10px;
+    left: 0;
+    opacity: 0;
+}
+
+.activeLink .highlight {
+    height: 2.875rem;
+    top: -10px;
+    opacity: 1;
+    transition: .5s;
+}
 
 .activeLink {
     position: relative;
     cursor: pointer;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: .3125rem;
-        height: 1.875rem;
-        background-color: #6781F7;
-    }
 
     .link__text {
         color: #fff;
